@@ -1,0 +1,4 @@
+[submodule "OCA/vertical-hotel"]
+	path = OCA/vertical-hotel
+	url = git@github.com:OCA/vertical-hotel.git
+	branch = 14.0
