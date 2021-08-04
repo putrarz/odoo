@@ -5,7 +5,7 @@
     'author': 'ARKANA SOLUSI DIGITAL',
     'category': 'Backend',
     'website': 'arkana.co.id',
-    'summary': 'Restful Api Service',
+    'summary': 'Restful Api Service Punya Mas Dimas',
     'description': '''
                     API for integration odoo with accpacc
                 ''',
