@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="wizard_sync_partner_form" model="ir.ui.view">
+        <field name="name">wizard.form.sync.partner</field>
+        <field name="model">sync.partner.accpacc</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Form Requests Sync Partner">
+                <group string="Form Requests Sync Partner">
+                    <group>
+                        <field name="limit"/>
+                    </group>
+                    <group>
+                        <field name="offset"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_sync_partner_from_accpacc" type="object" string="Sync Customers" class="oe_highlight"/>
+                     or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="wizard_sync_partner_action" model="ir.actions.act_window">
+        <field name="name">Action Wizard Sync Partner</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sync.partner.accpacc</field>
+        <field name="view_mode">form</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="wizard_sync_partner_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

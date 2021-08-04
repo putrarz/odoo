@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="rest_api_view_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.inherit.form.rest.api</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='customer_code']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                    <attribute name="force_save">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='team_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <field name="category_id" position="after">
+					<field name="contact_person" string="Contact Person"/>
+            	</field>
+            </field>
+        </record>
+
+        <menuitem id="sync_partners_accpacc_odoo_sales" name="Sync Partners From Accpacc" action="wizard_sync_partner_action"
+            parent="contacts.res_partner_menu_config" sequence="99"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_accpacc_log_form">
+        <field name="model">connector.accpacc</field>
+        <field name="arch" type="xml">
+            <form string="Connector Accpacc" edit="false" create="false">
+              <sheet>
+                <group>
+                  <group>
+                    <field name="url"/>
+                    <field name="request_method"/>
+                    <field name="request_time"/>
+                    <field name="response_time"/>
+                    <field name="is_request_body"/>
+                  </group>
+                  <group>
+                    <button name="action_download_header" type="object" icon="fa-download" class="oe_link"
+                            string="Download Request" />
+                    <field name="header_filename" string="Header"/>
+                    <button name="action_download_request" type="object" icon="fa-download" class="oe_link"
+                            attrs="{'invisible':[('is_request_body','=',False)]}" string="Download Request" />
+                    <field name="request_filename" string="Request"/>
+                    <button name="action_download_response" type="object" icon="fa-download" class="oe_link"
+                            string="Download Response" />
+                    <field name="response_filename"/>
+                    <field name="status_code" string="Response"/>
+                  </group>
+                </group>
+              </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_accpacc_log_list">
+        <field name="model">connector.accpacc</field>
+        <field name="arch" type="xml">
+            <tree string="Connector Accpacc" edit="false" create="false">
+                <field name="url"/>
+                <field name="request_method"/>
+                <field name="request_time"/>
+                <button name="action_download_header" type="object" icon="fa-download" class="oe_link"
+					string="Download Request" />
+				<field name="header_filename" string="Header" />
+                <field name="is_request_body" invisible="1"/>
+                <button name="action_download_request" type="object" icon="fa-download" class="oe_link"
+					attrs="{'invisible':[('is_request_body','=',False)]}" string="Download Request" />
+				<field name="request_filename" string="Request" />
+                <field name="response_time"/>
+                <button name="action_download_response" type="object" icon="fa-download" class="oe_link"
+					string="Download Response" />
+				<field name="response_filename" string="Response" />
+                <field name="status_code"/>
+            </tree>
+        </field>
+    </record>
+
+    <act_window name="Connector Accpacc Log" res_model="connector.accpacc" id="connector_list_action"/>
+    <menuitem id="connector_log_menu" name="Connector Accpacc Log" parent="base.menu_ir_property" action="connector_list_action"/>
+</odoo>

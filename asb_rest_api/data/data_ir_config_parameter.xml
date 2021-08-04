@@ -1,0 +1,45 @@
+<odoo>
+    <data noupdate="1">
+        <record id="config_accpacc_integration" model="ir.config_parameter">
+            <field name="key">accpacc_integration</field>
+            <field name="value">suspened</field>
+        </record>
+        <record id="login_username_accpacc_integration" model="ir.config_parameter">
+            <field name="key">login_username</field>
+            <field name="value">api-staging</field>
+        </record>
+        <record id="login_password_accpacc_integration" model="ir.config_parameter">
+            <field name="key">login_password</field>
+            <field name="value">dev123</field>
+        </record>
+        <record id="login_url_accpacc_integration" model="ir.config_parameter">
+            <field name="key">accpacc_url</field>
+            <field name="value">http://api-accpac-staging.pmki.co.id</field>
+        </record>
+
+        <record id="customers_accpacc_endpoint" model="ir.config_parameter">
+            <field name="key">accpacc_customers_endpoint</field>
+            <field name="value">api-pkgtra/customers</field>
+        </record>
+        <record id="items_accpacc_endpoint" model="ir.config_parameter">
+            <field name="key">accpacc_items_endpoint</field>
+            <field name="value">api-pkgtra/items</field>
+        </record>
+        <record id="inventory_items_accpacc_endpoint" model="ir.config_parameter">
+            <field name="key">accpacc_inventory_items_endpoint</field>
+            <field name="value">api-pkgtra/inventory_items</field>
+        </record>
+        <record id="shipments_accpacc_endpoint" model="ir.config_parameter">
+            <field name="key">accpacc_shipments_endpoint</field>
+            <field name="value">api-pkgtra/shipments</field>
+        </record>
+        <record id="invoices_accpacc_endpoint" model="ir.config_parameter">
+            <field name="key">accpacc_invoices_endpoint</field>
+            <field name="value">api-pkgtra/invoices</field>
+        </record>
+        <record id="invoices_register_payment_endpoint" model="ir.config_parameter">
+            <field name="key">accpacc_register_payment_endpoint</field>
+            <field name="value">api-pkgtra/register_payments</field>
+        </record>
+    </data>
+</odoo>

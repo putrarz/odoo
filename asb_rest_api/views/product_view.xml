@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+<!--  for inventory module  -->
+    <menuitem id="sync_product_accpacc_odoo" name="Sync Product From Accpacc" action="wizard_sync_product_action"
+            parent="stock.menu_stock_inventory_control" sequence="99"/>
+<!--  for sales module  -->
+    <menuitem id="sync_product_accpacc_odoo_sales" name="Sync Product From Accpacc" action="wizard_sync_product_action"
+            parent="sale.product_menu_catalog" sequence="99"/>
+</odoo>
