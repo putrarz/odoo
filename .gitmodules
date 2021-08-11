@@ -7,3 +7,8 @@
 	path = amirul-m/custom_addons
 	url = git@github.com:amirul-m/custom_addons.git
 	branch = sharing
+
+[submodule "ardianpramana/training_odoo_automation_test"]
+	path = ardianpramana/training_odoo_automation_test
+	url = git@github.com:ardianpramana/training_odoo_automation_test.git
+	branch = master
