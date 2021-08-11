@@ -2,3 +2,8 @@
 	path = OCA/vertical-hotel
 	url = git@github.com:OCA/vertical-hotel.git
 	branch = 14.0
+
+[submodule "amirul-m/custom_addons"]
+	path = amirul-m/custom_addons
+	url = git@github.com:amirul-m/custom_addons.git
+	branch = sharing
